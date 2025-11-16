@@ -69,6 +69,8 @@ function renderNEOs(data, sortFunction) {
       <div class="card-magnitude card-extra">Magnitude: ${NEO.absolute_magnitude_h}</div>
       <div class="card-hazardous card-extra">Potentially hazardous: ${NEO.is_potentially_hazardous_asteroid} </div>
       <div class="card-planet card-extra">Planet: ${NEO.close_approach_data[0].orbiting_body} </div>
+      <div class="card-id card-extra">Id: ${NEO.id} </div>
+
       `
     card.addEventListener("click", (e) => {
       card.classList.toggle("small")
