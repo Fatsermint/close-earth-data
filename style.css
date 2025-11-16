@@ -1,0 +1,114 @@
+
+
+body {
+    background-color: rgb(36, 36, 36);
+    color: white;
+    font-family: sans-serif;
+    
+    
+}
+#headl{
+    text-align: center;
+    font-size: 6.7vh;
+}
+
+#sortP{
+    font-size: 3vh;
+    text-align: left;
+}
+#sortBy{
+    width: 25vh;
+    height: 10vh;
+    background-color: #333333;
+    color: white;
+    border-radius: 1vh;
+    text-align: center;
+    font-size: 3vh;
+    gap: 1vh;
+}
+#lowOrHigh{
+    width: 20vh;
+    height: 10vh;
+    background-color: #333333;
+    color: white;
+    border-radius: 1vh;
+    text-align: center;
+    font-size: 3vh;
+    gap: 1vh;
+    
+}
+#sortBy:hover{
+    transform: scale(1.1);
+}
+#container {
+    place-content: center;
+    display: flex;
+    width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.2em;
+    flex-wrap: wrap;
+}
+
+.card{
+    padding: 1vh;
+    border-radius: 1vh;
+    background-color: #333333;
+    display: grid;
+    width: 20em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 6fr repeat(7, 0.7fr);
+    grid-template-areas: 
+    "image image image"
+    "title time time"
+    "distance distance distance"
+    "kmh kmh kmh"
+    "size size size"
+    "magnitude magnitude magnitude"
+    "hazardous hazardous hazardous"
+    "planet planet planet";
+}
+.card:hover{
+    transform: scale(1.1);
+    outline-style:solid;
+    outline-color: #888888;
+    outline-width: 1vh;
+}
+.card.small{
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 6fr repeat(1, 0.7fr);
+    grid-template-areas: 
+    "image image image"
+    "title time time";
+    height: min-content;
+}
+.card-image {
+    grid-area: image;
+    width: 100%;
+}
+.card-title {
+    grid-area: title;
+}
+.card-time {
+    grid-area: time;
+}
+.card-distance{
+    grid-area: distance;
+}
+.card-kmh{
+    grid-area: kmh;
+}
+.card-size{
+    grid-area: size;
+}
+.card-magnitude{
+    grid-area: magnitude;
+}
+.card-hazardous{
+    grid-area: hazardous;
+}
+.card-planet{
+    grid-area: planet;
+}
+.card.small .card-extra{
+    display: none !important;
+}
