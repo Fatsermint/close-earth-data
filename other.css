@@ -7,7 +7,7 @@ body {
     padding: 0;
 }
 #navbar{
-    margin-top: 3vh;
+    margin-top: 1.5vh;
     position: fixed;    
     display: flex;
     width: 15%;
@@ -16,8 +16,9 @@ body {
     justify-content: center;
     padding: 1em;
     border-radius: 7vh;
-    background-color: #bdbdbd6e;
+    background-color: #252525d0;
     z-index: 1;
+    
 }
 .link{
     padding: 2vh;

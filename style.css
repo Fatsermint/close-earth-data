@@ -11,6 +11,8 @@ body {
 #headl{
     text-align: center;
     font-size: 6.7vh;
+    margin-top: 10vh;
+
 }
 #head2{
     text-align: center;
@@ -139,8 +141,9 @@ body {
     justify-content: center;
     padding: 1em;
     border-radius: 7vh;
-    background-color: #bdbdbd6e;
+    background-color: #252525d0;
     z-index: 1;
+    margin-top: 1vh;
 }
 .link{
     padding: 2vh;
