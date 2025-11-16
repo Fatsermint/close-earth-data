@@ -4,41 +4,53 @@ body {
     background-color: rgb(36, 36, 36);
     color: white;
     font-family: sans-serif;
-    
+    background-image: url(./images/space-backround.avif);
     
 }
 #headl{
     text-align: center;
     font-size: 6.7vh;
 }
-
+#head2{
+    text-align: center;
+    font-size: 2vh;
+}
 #sortP{
-    font-size: 3vh;
+    font-size: 3.5vh;
     text-align: left;
+    margin-left: 2vh;
+    margin-bottom: 2vh;
 }
 #sortBy{
     width: 25vh;
     height: 10vh;
-    background-color: #333333;
+    background-color: #363636a8;
     color: white;
     border-radius: 1vh;
     text-align: center;
     font-size: 3vh;
-    gap: 1vh;
+    margin-bottom: 2vh;
+    margin-left: 2vh;
+
 }
 #lowOrHigh{
     width: 20vh;
     height: 10vh;
-    background-color: #333333;
+    background-color: #363636a8;
     color: white;
     border-radius: 1vh;
     text-align: center;
     font-size: 3vh;
     gap: 1vh;
-    
+    margin-bottom: 2vh;
+    margin-left: 2vh;
 }
 #sortBy:hover{
     transform: scale(1.1);
+}
+#lowOrHigh:hover{
+    transform: scale(1.1);
+
 }
 #container {
     place-content: center;
@@ -52,7 +64,7 @@ body {
 .card{
     padding: 1vh;
     border-radius: 1vh;
-    background-color: #333333;
+    background-color: #36363688;
     display: grid;
     width: 20em;
     grid-template-columns: repeat(3, 1fr);
@@ -70,7 +82,7 @@ body {
 .card:hover{
     transform: scale(1.1);
     outline-style:solid;
-    outline-color: #888888;
+    outline-color: #888888c7;
     outline-width: 1vh;
 }
 .card.small{
