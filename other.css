@@ -5,6 +5,7 @@ body {
     background-image: url(./images/space-backround.avif);
     margin: 0;
     padding: 0;
+    cursor:  url(./images/cursor-final.png), pointer;
 }
 #navbar{
     margin-top: 1.5vh;
@@ -18,6 +19,7 @@ body {
     border-radius: 7vh;
     background-color: #252525d0;
     z-index: 1;
+    cursor:  url(./images/cursor-final.png), pointer;
     
 }
 .link{
@@ -26,6 +28,8 @@ body {
     font-size: 2.2vh;
     color: #ff7575;
     font-weight: 1000; 
+    cursor:  url(./images/cursor-final.png), pointer;
+
 }
 .link2{
     padding: 2vh;
@@ -33,6 +37,8 @@ body {
     font-size: 2.2vh;
     color: #7471ff;
     font-weight: 1000; 
+    cursor:  url(./images/cursor-final.png), pointer;
+
 }
 .link:hover{
     transform: scale(1.4);

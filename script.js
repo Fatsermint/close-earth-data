@@ -40,22 +40,23 @@ fetch(`https://api.nasa.gov/neo/rest/v1/feed?start_date=${lastweek}&api_key=cer2
   .then(response => response.json())
   .then(data => {
     console.log(data)
+
     const lastWeekNEOs = Object.entries(data.near_earth_objects).reduce((prev, [date, neo]) => {
       return new Date() - new Date(date) < 1000 * 3600 * 24 * 7 ? [...prev, ...neo] : prev
     }, [])
     document.querySelectorAll("#sortBy, #lowOrHigh").forEach(element => element.addEventListener("change", (e) => {
       const sortType = document.getElementById("sortBy").value
       const sortTypeasdes = document.getElementById("lowOrHigh").value
-
-      renderNEOs(lastWeekNEOs, sortFunctions[sortType][sortTypeasdes])
+      
+      renderNEOs(lastWeekNEOs, sortFunctions[sortType][sortTypeasdes], data)
     }))
-    renderNEOs(lastWeekNEOs, sortFunctions.time.descending)
+    renderNEOs(lastWeekNEOs, sortFunctions.time.descending, data)
   })
 
-function renderNEOs(data, sortFunction) {
+function renderNEOs(data, sortFunction, a) {
   document.getElementById("container").innerHTML = ""
+ 
   data.sort(sortFunction).forEach(NEO => {
-
     const card = document.createElement("div")
 
     card.classList.add("card", "small")
@@ -72,6 +73,12 @@ function renderNEOs(data, sortFunction) {
       <div class="card-id card-extra">Id: ${NEO.id} </div>
 
       `
+      console.log(moment(NEO.close_approach_data[0].epoch_date_close_approach).format("h:mm"))
+      console.log(moment(new Date().toISOString()).format("h:mm"))
+      const now = moment(new Date().toISOString()).format("h:mm")
+      document.getElementById("statsP").innerHTML = `
+         Objects from last 7 days: ${a.element_count} <br>
+        `
     card.addEventListener("click", (e) => {
       card.classList.toggle("small")
     })
